@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래식 스네이크</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header>
+        <div>
+          <h1>스네이크</h1>
+          <p>방향키 또는 WASD로 이동하세요.</p>
+        </div>
+        <div class="score" aria-live="polite">점수 <strong data-score>0</strong></div>
+      </header>
+      <section class="game" aria-label="스네이크 게임">
+        <div class="board" data-board role="img" aria-label="20 x 20 게임 보드"></div>
+        <p class="status" data-status aria-live="polite">플레이 중</p>
+        <div class="actions">
+          <button type="button" data-pause>일시정지</button>
+          <button type="button" data-restart>재시작</button>
+        </div>
+        <div class="touch-controls" aria-label="화면 조작">
+          <button type="button" data-direction="up">위</button>
+          <button type="button" data-direction="left">왼쪽</button>
+          <button type="button" data-direction="down">아래</button>
+          <button type="button" data-direction="right">오른쪽</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
