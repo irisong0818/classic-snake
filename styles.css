@@ -1,0 +1,22 @@
+:root { font-family: system-ui, sans-serif; color: #1d2a20; background: #f4f6f1; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 1.5rem; }
+.game-shell { width: min(100%, 34rem); }
+header { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+h1 { margin: 0; font-size: 1.75rem; }
+p { margin: .25rem 0 0; color: #506052; }
+.score { white-space: nowrap; font-size: 1rem; }
+.score strong { font-size: 1.4rem; }
+.game { background: #fff; border: 1px solid #cbd4c7; border-radius: .5rem; padding: 1rem; box-shadow: 0 2px 8px #15251512; }
+.board { display: grid; grid-template-columns: repeat(20, 1fr); aspect-ratio: 1; overflow: hidden; border: 1px solid #d9e0d5; background: #f8faf7; }
+.cell { min-width: 0; border-right: 1px solid #e8ece5; border-bottom: 1px solid #e8ece5; }
+.cell.snake { background: #397249; }
+.cell.head { background: #1e4d2d; }
+.cell.food { background: #d85a4c; border-radius: 35%; }
+.status { min-height: 1.5rem; margin: .8rem 0; font-weight: 600; color: #1d2a20; }
+.actions, .touch-controls { display: flex; justify-content: center; gap: .5rem; flex-wrap: wrap; }
+button { appearance: none; border: 1px solid #6e806d; border-radius: .3rem; background: #fff; color: #1d2a20; font: inherit; padding: .45rem .7rem; cursor: pointer; }
+button:hover:not(:disabled), button:focus-visible { background: #e9f0e7; outline: 2px solid #2e6a3d; outline-offset: 2px; }
+button:disabled { cursor: default; opacity: .55; }
+.touch-controls { margin-top: .75rem; }
+@media (min-width: 640px) { .touch-controls { display: none; } }
